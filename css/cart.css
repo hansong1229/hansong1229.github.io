@@ -1,0 +1,72 @@
+td,th {
+    /* border: 1px solid black; */
+}
+
+/* table은 기본적으로 서로 떨어져있기 때문에 border-collapse: collapse를 하면 보기 좋게 붙는다 그래서 CSS기본 세팅할때 적는 사람이 많음  */
+table{
+    border-collapse: collapse ;
+}
+
+div{
+    box-sizing: border-box;
+}
+
+.cart-background{
+    width: 100%;
+    background-color: #c2d3de;
+    padding: 20px;
+}
+
+.cart-table{
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    border-radius: 10px;
+}
+
+.cart-table td,.cart-table td{
+    padding: 15px;
+    border-bottom: 1px solid #c2d3de;
+}
+
+.cart-table th:nth-child(2){
+    width: 400px;
+}
+
+.btn{
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: coral;
+    color: white;
+    cursor: pointer;
+}
+/* pseudo-class 특정동작시 바뀌는 스타일 */
+.btn:hover {
+    background-color: chocolate;
+}
+.btn:focus{
+    background-color: gray;
+}
+.btn:active{
+    background-color: brown;
+}
+.input-test{
+    font-size: 20px;
+}
+/* .input-test:focus{
+    border: 2px solid red;
+} */
+/* .custom-link {
+    링크 밑줄 없애주세요
+    text-decoration: none;
+} */
+/* 
+.custom-link:link{
+    color: violet;
+}
+.custom-link:visited{
+    color: black;
+} */

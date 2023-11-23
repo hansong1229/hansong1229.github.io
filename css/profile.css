@@ -1,0 +1,33 @@
+.profile{
+    width: 100px; 
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.title{
+    font-size: 16px; 
+    font-family: 'nanumsquare';
+    text-align: center;
+}
+
+.content{
+    text-align: center;
+}
+
+.box{
+    width: 200px;
+    background-color: cadetblue;
+    margin : 30px;
+    padding: 40px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: block;
+    /* div, p, h는 display:block을 기본으로 가지고 있다 */
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 10px;
+    /* font-size, color, font-family 와 같은 일부 속성은 inherit(상속)이 된다. 부모태그에서 자식태그로 요소 전달느낌 */
+    box-shadow:0 5px 5px 0;
+
+}

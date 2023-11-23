@@ -1,0 +1,42 @@
+/* 초보들이 흔히 하는 class 작명 재사용성이 거의 떨어짐 */
+.btn-red {
+    font-size : 20px;
+    padding : 15px;
+    border : none;
+    cursor : pointer;
+    background : red;
+  }
+  
+  .btn-blue {
+    font-size : 20px;
+    padding : 15px;
+    border : none;
+    cursor : pointer;
+    background : blue;
+  }
+
+  /* 고수 뼈대용 class, 살점용 class 각각 제작 */
+  .main-btn {
+    font-size : 20px;
+    padding : 15px;
+    border : none;
+    cursor : pointer;
+  }
+  
+  .bg-red {
+    background : red;
+  }
+  .bg-blue {
+    background : blue;
+  }
+
+  /* 만들어두면 편한 Utility class */
+  .font-small {
+    font-size : 12px;
+  }
+  .font-medium {
+    font-size : 16px;
+  }
+  .font-lg {
+    font-size : 20px;
+  }

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./css/layouy_exam.css" rel="stylesheet">
+</head>
+<body>
+    
+<!-- div대신 nav라고 써도 된다 둘이 기능 차이는 없으나 html작성할때 보기 편함
+자매품 section footer가 있다. -->
+        <nav>
+            <ul class="navbar">
+                <li><a href="#">영화</a></li>
+                <li><a href="#">맛집</a></li>
+                <li><a href="#">IT</a></li>
+                <li><a href="#">컴퓨터</a></li>
+            </ul>
+        </nav>
+
+
+
+
+
+    <div class="container">
+        <div class="blog-content">
+            <div>
+                <img src="./profile.jpg" class="blog-profile">
+                <div class="blog-name">
+                    <h4 style="margin: 8px;">이름</h4>
+                    <p style="margin: 8px;">날짜</p>
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+            <!-- 위에 div태그에 float를 썼기 때문에 바로 아래 div박스에 clear both를 하면 위에 div는 공중에 떠있는 상태이기 때문에
+            margin-top의 경우 값을 많이 주거나 해야 먹힌다 그래서 float 아래에 빈 div를 넣고 거기에 clear를 하는게 좋다 -->
+            <div style="margin-top: 10px;">
+                <h4>블로그글</h4>
+                <p>가성비 맛집 발견</p>
+            </div>
+        </div>
+
+        <div class="blog-img">
+            <img src="./item.jpg" style="width: 100%;">
+        </div>
+    </div>
+
+</body>
+</html>

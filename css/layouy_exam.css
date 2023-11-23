@@ -1,0 +1,50 @@
+.container{
+    width: 800px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blog-content{
+    width: 80%;
+    height: 200px;
+    background: #eee;
+    float: left;
+}
+
+.blog-img{
+    width: 20%;
+    height: 200px; 
+
+    float: left;
+}
+
+.blog-profile{
+    width: 50px;
+    float: left;
+    display: block;
+}
+
+.blog-name{
+    float: left;
+}
+
+.navbar li{
+    /* selector문법 중 공백: ~안에있는 모든 자식 */
+    /* selector문법 중 >: ~안에 있는 직계자식 */
+    display: inline-block;
+    width: 60px;
+    text-align: center;
+    background: #eee;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.navbar a{
+    font-size: 16px;
+    /* a태그의 밑줄 제거 기능 */
+    text-decoration: none; 
+    
+}
+/* 자손 선택자를 너무 남발하는건 좋지 못한 스타일링
+바로 위의 부모에 클래스를 부여하고 바로 직계에게 주는 방법이 좋다. (나중에 내가 알아먹기 쉽게 하기 위해) */

@@ -1,0 +1,42 @@
+.container{
+    width: 800px;
+    /* 보통 컨테이너는 레이아웃 전체 크기를 정할때 쓴다. */
+}
+
+.header{
+    width: 100%;
+    /* 내 상위 요소크기의 100%로 지정 */
+    height: 100px;
+    background-color: aquamarine;
+}
+
+.left-menu{
+    width: 20%;
+    height: 400px;
+    background-color: cornflowerblue;
+    /* float:left; */
+
+    /* 내 크기만큼 차지 */
+    display: inline-block;
+    
+    /* 한줄 전부 차지 */
+    /* display:block; */
+    vertical-align: top;
+    /* display: inline-block일때 쓰면 문제가 해결됨
+    vertical-align이 없다면 옆에 p태그의 베이스라인 위에 오려고 하는 성질때문에 디자인 깨짐 */
+}
+
+.right{
+    width: 80%;
+    height: 400px;
+    background-color: coral;
+    /* float:left; */
+    display: inline-block;
+}
+
+.footer {
+    width: 100%;
+    height: 100px;
+    background-color: grey;
+    /* clear: both; */
+}

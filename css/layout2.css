@@ -1,0 +1,255 @@
+/* CSS기본설정을 할때  box-sizing:border-box; 를 자주 애용한다. 보기도 좋고 만들때 편하다. */
+
+div, input, textarea {
+    box-sizing: border-box;
+}
+
+
+
+.main-background {
+    width: 100%;
+    height: 500px;
+    /* url 여러개를 넣으면 배경 겹치게 할수도 있다. */
+    background-image: url(https://codingapple.com/wp-content/uploads/2019/06/shoes.jpg);
+    /* 배경이미지는 정해진 크기를 넘기게 되면 반복되는 효과가 있다. */
+    background-size: cover;
+    /* 배경 사이즈 cover = 배경 짤려도 상관없으니 빈공간 없이 배경으로 꽉 채워라 */
+    /* 배경 사이즈 contain = 여백이 생겨도 상관없으니 배경은 짤리게 하지 말아달라 */
+    /* 반복되는 배경을 막고싶을때 */
+    background-repeat: no-repeat;
+    /* 배경을 중앙부터 채워주세요 */
+    background-position: center;
+    /* 박스에 보정 입히기 */
+    /* filter: brightness(70%); */
+    padding: 1px;
+    text-align: center;
+    align-items: center;
+}
+
+.main-title {
+    color: white;
+    font-size: 40px;
+    margin-top: 200px;
+
+    /* 이렇게하면 main-background와 main-title의 테두리가 같이 공유되기 때문에 마진값을 주면 둘 다 동시에 내려간다.(margin collapse현상)
+    이게 싫다면 둘중 하나에 padding값을 줘서 두개가 붙지 않게 해야한다. */
+}
+
+.main-content{
+    color:white;
+
+}
+
+.main-button{
+    padding: 15px;
+    font-size:20px;
+    background: white;
+    border: none;
+    border-radius: 5px;
+
+    /*  relative내 원래 위치 기준으로 이동해주세요 */
+    position: absolute;
+    left:0;
+    right: 0;
+    margin:auto;
+    width:150px;
+    /* static 좌표이동 X
+    fixed 현재 화면이 기준
+    absolute 내 부모 태그가 기준이 되어 움직임 */
+
+}
+
+.explain-box{
+    /* 반응형 레이아웃 만들때 width:% max-width:xx 잘 기억하자 */
+    width: 80%;
+    max-width: 600px;
+    margin:auto;
+    padding:20px;
+    text-align: center;
+    background-color: #eee;
+    position: relative;
+    top: -40px;
+    /* float속성인 요소들끼리 어떤 요소가 앞으로 나오게 할지 정하는 것 숫자가 높을수록 앞으로 온다. */
+    z-index:5;
+    /* 원래 width는 padding border를 제외한 너비인데 box-sizing:border-box를 설정하면 padding, border의 값도 width에 포함된다. 
+    이걸 css파일 만들자마자 div에 해당속성을 추가하면 나중에 쓰기 편하다*/
+    box-sizing: border-box;
+}
+
+/* 참고사항 : 인터넷 브라우저마다 페이지가 다르게 보일 수 있는 현상이 있는데 그럴때 CSS Normalize를 다운받아서 쓰면 해결된다. */
+
+input[type=text]{
+    padding : 10px;
+    font-size : 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.form-background{
+    background-color: black;
+    padding:30px;
+}
+
+.form-white{
+    background-color: white;
+    padding: 30px;
+    width: 80%;
+    max-width: 600px;
+    margin : auto;
+}
+
+.form-input{
+    width:100%;
+    padding : 10px;
+    font-size : 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.w-50{
+    width: 50%;
+    float: left;
+    padding: 10px;
+}
+
+.w-100{
+    width: 100%;
+    padding: 10px;
+}
+
+.yellow-button{
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+}
+
+.flex-item{
+    width: 100px;
+    height: 100px;
+    background-color: gray;
+    margin: 5px;
+}
+
+.flex-container{
+    /* 부모에 display:flex를 주면 가로정렬이 된다 */
+    display: flex;
+    /* 가로 중앙배치 */
+    /* justify-content: center; */
+    /* 세로로 배치 */
+    /* flex-direction: row; */
+    /* 상하 중앙정렬 */
+    /* align-items: center; */
+
+}
+
+.nav-container{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    padding: 10px;
+}
+
+.nav-item{
+    margin-right: 10px;
+}
+/* 
+.test{
+    width: 100vw; */
+    /* 단위 더 알아보기  */
+    /* vw(브라우저 폭에 비례)
+       vh(브라우저 높이에 비례)
+       rem(기본 폰트사이즈에 비례) 모든곳을 rem으로 크기 지정하면 기본 font-size가 커져도 같이 커짐
+       반응형 사이트 만들때 좋다
+        */
+    /* height: 100vh;
+    background: gray;
+} */
+
+.product-container {
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.product-container div {
+    float:left;
+    width: 25%;
+}
+
+.product-container::after{
+    /* 이렇게 하면 float를 준 div태그 뒤에 clear:both 별도의 div 추가 없이 준것과 같은 효과를 낼 수 있다 */
+    content: '';
+    display: block;
+    clear: both;
+    float: none;
+}
+
+/* 이렇게 하면 파일선택 버튼을 스타일링 할 수 있다. */
+.input-file::file-selector-button {
+    background: skyblue;
+    border: none;
+    padding: 20px;
+}
+.input-file.input-file::file-selector-button:hover {
+    background: blue;
+}
+
+.pseudo::first-letter{
+    /* 첫 글자만 크게 넣고싶다 */
+    /* pseudo-class(다른상태일 때) */
+    /* pseudo-element(내부의 일부분만 스타일줄 때) */
+    color: red;
+    font-size: 30px;
+    /* 첫 줄만 크게 할때는 first-line */
+}
+
+.pseudo::after{
+    /* 중요!!!!! 프로젝트할때 자주 본거 ::after(내부 맨 뒤에 뭔가 추가할 때) ::before(내부 맨 앞에 뭔가 추가할때) */
+    content: '안녕';
+}
+
+input[type=file]::-webkit-file-upload-button {
+    background: skyblue;
+    border: none;
+    /* -webkit- 크롬,사파리,edge에서만 적용되는 스타일 */
+    /* -ms- Explore에서만 적용되는 스타일 */
+    /* -moz- 파이어폭스에서만 적용되는 스타일 */
+}
+
+input::-webkit-input-placeholder{
+    /* placeholder의 색을 바꾸는 방법 */
+    color: red;
+}
+
+input[type=range i]::-webkit-slider-thumb {
+    appearance: none;
+    background: red;
+    width: 50px;
+    height: 50px;
+}
+
+/* 미디어쿼리 : 특정크기가 넘어서면 해당 css를 실행해주세요 */
+@media screen and (max-width: 1200px){
+    .main-title{
+        font-size: 30px;
+    }
+    .product-container div{
+        width: 50%;
+    }
+    .product-container{
+        max-width: 600px;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+    .main-title{
+        font-size: 20px;
+    }
+    .product-container div{
+        width:100%;
+    }
+}

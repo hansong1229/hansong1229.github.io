@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./css/layout1.css" rel="stylesheet">
+</head>
+<body>
+    <!-- float 이용한 레이아웃 만들기 -->
+    <div class="container">
+        <div class="header"></div>
+        <!-- div는 display:block을 가지기 때문에 당연히 아래로 간다 그래서 float를 해야한다. -->
+        <div class="left-menu"></div><div class="right">
+            <p>안녕하세요</p>
+        </div>
+        <!-- display : inline-block을 쓰려면 div사이에 공백을 없애야한다. -->
+        <!-- 또는 부모 태그에 font-size:0px을 하게 되면 중간에 아무것도 안오는것과 같기 때문에 공백이 없게되고 한줄 정렬이 된다. -->
+        <!-- left랑 right에서 float를 사용했기 때문에 공중에 떠있는것과 같아서 footer는 header바로 아래 온다. -->
+        <!-- 그래서 clear:both;를 사용하면 제대로 적용된다. -->
+        <div class="footer"></div>
+    </div>
+
+</body>
+</html>

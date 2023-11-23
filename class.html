@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./css/class.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 조그만거 만들면 class 대충 만들어도 되는데 큰거 만들면 중복 스타일때문에 귀찮아짐 -->
+    <!-- 장점
+        1. css양이 줄어든다.
+        2. 유지보수 편리 -->
+    <button class="main-btn bg-red">더알아보기</button>
+    <button class="main-btn bg-blue">구매하기</button>
+
+    <!-- class 작명할 때 창의력이 딸리면 BEM(Block__Element--Modifier)를 따라해보자 
+        class="덩어리이름__역할--세부사항"-->
+    <div class="profile">
+        <img class="profile__img">
+        <h4 class="profile__title"></h4>
+        <p class="profile__content"></p>
+        <button class="profile__button--red">버튼1</button>
+        <button class="profile__button--blue">버튼2</button>
+    </div>
+</body>
+</html>
